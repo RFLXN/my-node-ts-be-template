@@ -7,7 +7,7 @@
     "lint": "eslint src/**/*.ts --fix",
     "clean": "rimraf dist",
     "prebuild": "yarn run clean",
-    "build": "swc src --only **/*.ts -d dist --config-file .swcrc && mv dist/src/* dist && rmdir dist/src",
+    "build": "swc src -d dist --config-file .swcrc && mv dist/src/* dist && rmdir dist/src",
     "type": "tsc --noEmit",
     "test": "jest",
     "start": "node dist/index.js",
